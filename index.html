@@ -136,6 +136,49 @@
       font-size: 1.05rem;
     }
 
+    /* Form */
+    .contact-form { margin-top: 40px; }
+    .contact-form label {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--dark);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      display: block;
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #c8c3bc;
+      padding: 10px 0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      color: var(--dark);
+      outline: none;
+      margin-bottom: 32px;
+      transition: border-color 0.2s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus { border-color: var(--dark); }
+    .contact-form textarea { resize: none; height: 100px; }
+    .contact-form button {
+      background: none;
+      border: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      color: var(--dark);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      cursor: pointer;
+      padding: 0;
+    }
+    .contact-form button:hover { opacity: 0.6; }
+
     /* Contact anchor */
     #contact { scroll-margin-top: 60px; }
 
@@ -282,7 +325,15 @@
     <h2>Ready to automate the boring stuff?</h2>
     <p>Let's find the one task that's eating your week and put it on autopilot. Whether you're a hotel, an agency, a law firm, or a growing shop, our AI automation Cyprus service is built to save you time from day one.</p>
     <p>No jargon. No pressure. Just a straight conversation about what's worth automating in your business.</p>
-    <a href="mailto:hello@automationcyprus.com">Book your free consultation →</a>
+    <form class="contact-form" action="https://formspree.io/f/mwleazlo" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="your@email.com" required />
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Tell us what you'd like to automate" required></textarea>
+      <button type="submit">Send message →</button>
+    </form>
   </div>
 </section>
 
